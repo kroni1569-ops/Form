@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KR KHAN | Editor Registration</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #090d16;
+      color: #f3f4f6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 18px 18px 0 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .brand-badge {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 6px;
+      font-weight: 800;
+    }
+
+    .header p {
+      font-size: 13px;
+      opacity: 0.95;
+    }
+
+    .form-box {
+      background: #111827;
+      padding: 25px;
+      border-radius: 0 0 18px 18px;
+      border: 1px solid #1f2937;
+      border-top: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 7px;
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      background: #1f2937;
+      color: #ffffff;
+      border: 1px solid #374151;
+      border-radius: 9px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .checkbox {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 20px 0;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .checkbox input {
+      width: auto;
+      margin-top: 3px;
+    }
+
+    .terms {
+      background: #1f2937;
+      border: 1px solid #374151;
+      color: #9ca3af;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .terms strong {
+      color: #f3f4f6;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      transition: opacity 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.95;
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    .success h2 {
+      color: #10b981;
+      margin-bottom: 10px;
+    }
+
+    .success p {
+      color: #9ca3af;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .footer strong {
+      color: #818cf8;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="brand-badge">⚡ KR KHAN CREATIVE STUDIO</div>
+    <h1>🎬 Editor Registration</h1>
+    <p>Join KR KHAN Team as a Video / Reels Editor</p>
+  </div>
+
+  <div class="form-box">
+
+    <form id="editorForm">
+
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label>WhatsApp Number *</label>
+        <input type="tel" id="phone" placeholder="Enter WhatsApp number" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" id="city" placeholder="Enter your city">
+      </div>
+
+      <div class="form-group">
+        <label>Editing Experience *</label>
+        <select id="experience" required>
+          <option value="">Select experience</option>
+          <option>Fresher</option>
+          <option>Less than 6 Months</option>
+          <option>6 Months - 1 Year</option>
+          <option>1 - 2 Years</option>
+          <option>2+ Years</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Editing Software *</label>
+        <select id="software" required>
+          <option value="">Select software</option>
+          <option>CapCut</option>
+          <option>VN Editor</option>
+          <option>Adobe Premiere Pro</option>
+          <option>After Effects</option>
+          <option>DaVinci Resolve</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Portfolio / Sample Work Link *</label>
+        <input type="url" id="portfolio"
+               placeholder="https://..."
+               required>
+      </div>
+
+      <div class="form-group">
+        <label>Expected Price Package Per Reel *</label>
+        <select id="price" required>
+          <option value="">Select Package</option>
+          <option value="₹30 Per Reel">₹30 Per Reel</option>
+          <option value="₹45 Per Reel">₹45 Per Reel</option>
+          <option value="₹60 Per Reel">₹60 Per Reel</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Editor UPI ID (For Payment) *</label>
+        <input type="text" id="upi" placeholder="e.g. example@upi / 9876543210@paytm" required>
+      </div>
+
+      <div class="form-group">
+        <label>Average Delivery Time</label>
+        <select id="delivery">
+          <option value="">Select</option>
+          <option>Same Day</option>
+          <option>1 Day</option>
+          <option>2 Days</option>
+          <option>3 Days</option>
+          <option>More than 3 Days</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>About Yourself</label>
+        <textarea id="about"
+          placeholder="Tell us briefly about your editing skills..."></textarea>
+      </div>
+
+      <div class="terms">
+        <strong>KR KHAN Studio Terms & Conditions</strong><br><br>
+
+        1. Registration information must be accurate.<br>
+        2. Portfolio/sample work must belong to you.<br>
+        3. Registration does not guarantee selection.<br>
+        4. A sample editing task may be requested before selection.<br>
+        5. Work, payment and deadlines will be discussed separately with selected editors.<br>
+        6. False information or copied work may result in rejection.
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="terms" required>
+        <span>I agree to KR KHAN Terms & Conditions.</span>
+      </div>
+
+      <button type="submit">
+        Submit Registration to KR KHAN
+      </button>
+
+    </form>
+
+    <div class="success" id="success">
+      <h2>✅ Registration Submitted!</h2>
+      <p>Thank you for applying at KR KHAN Creative Studio.</p>
+      <p>We will contact you if your profile is selected.</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2026 <strong>KR KHAN CREATIVE STUDIO</strong> • All Rights Reserved
+  </div>
+
+</div>
+
+<script>
+  document.getElementById("editorForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Target WhatsApp Number
+    const targetNumber = "916291084520";
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value || "N/A";
+    const city = document.getElementById("city").value || "N/A";
+    const experience = document.getElementById("experience").value;
+    const software = document.getElementById("software").value;
+    const portfolio = document.getElementById("portfolio").value;
+    const price = document.getElementById("price").value;
+    const upi = document.getElementById("upi").value;
+    const delivery = document.getElementById("delivery").value || "N/A";
+    const about = document.getElementById("about").value || "N/A";
+
+    // Format WhatsApp Message with KR KHAN Branding
+    const message = `*🔥 NEW EDITOR REGISTRATION - KR KHAN STUDIO*%0A%0A` +
+      `*Name:* ${encodeURIComponent(name)}%0A` +
+      `*WhatsApp:* ${encodeURIComponent(phone)}%0A` +
+      `*Email:* ${encodeURIComponent(email)}%0A` +
+      `*City:* ${encodeURIComponent(city)}%0A` +
+      `*Experience:* ${encodeURIComponent(experience)}%0A` +
+      `*Software:* ${encodeURIComponent(software)}%0A` +
+      `*Portfolio:* ${encodeURIComponent(portfolio)}%0A` +
+      `*Package Price:* ${encodeURIComponent(price)}%0A` +
+      `*UPI ID:* ${encodeURIComponent(upi)}%0A` +
+      `*Delivery Time:* ${encodeURIComponent(delivery)}%0A` +
+      `*About:* ${encodeURIComponent(about)}`;
+
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${targetNumber}?text=${message}`;
+
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+
+    // Display Success UI
+    document.getElementById("editorForm").style.display = "none";
+    document.getElementById("success").style.display = "block";
+  });
+</script>
+
+</body>
+</html>
